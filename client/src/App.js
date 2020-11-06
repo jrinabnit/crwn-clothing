@@ -14,7 +14,7 @@ import { GlobalStyle } from './global.styles';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-const App = ({ checkUserSession }) => {
+const App = ({ checkUserSession, currentUser }) => {
 	useEffect(
 		() => {
 			checkUserSession();
@@ -33,7 +33,7 @@ const App = ({ checkUserSession }) => {
 				<Route
 					exact
 					path="/signin"
-					render={() => (this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />)}
+					render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />)}
 				/>
 			</Switch>
 		</div>

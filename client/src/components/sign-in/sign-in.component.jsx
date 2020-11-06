@@ -8,7 +8,7 @@ import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actio
 
 import { SignInContainer, SignInTitle, ButtonsBarContainer } from './sign-in.styles';
 
-const SignIn = (emailSignInStart, googleSignInStart) => {
+const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 	const [ userCredentials, setCredentials ] = useState({ email: '', password: '' });
 
 	const { email, password } = userCredentials;
@@ -42,7 +42,6 @@ const SignIn = (emailSignInStart, googleSignInStart) => {
 				<ButtonsBarContainer>
 					<CustomButton type="submit">Sign In</CustomButton>
 					<CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn>
-						{' '}
 						Sign In With Google
 					</CustomButton>
 				</ButtonsBarContainer>

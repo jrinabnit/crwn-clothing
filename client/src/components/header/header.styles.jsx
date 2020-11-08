@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
 		height: 60px;
 		padding: 10px;
 		margin-bottom: 20px;
-    }
+	}
 `;
 
 export const LogoContainer = styled(Link)`
@@ -34,8 +34,8 @@ export const OptionsContainer = styled.div`
 	justify-content: flex-end;
 
 	@media screen and (max-width: 800px) {
-        width: 80%;
-    }
+		width: 80%;
+	}
 `;
 
 export const OptionLink = styled(Link)`
